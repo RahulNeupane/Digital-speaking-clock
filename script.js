@@ -8,15 +8,19 @@ function displayTime(){
     
     if(hrs>=12){
         hrs = hrs - 12;
-        hrs = 0 +''+ hrs;
         session.innerHTML = "PM"
     }
     else{
         session.innerHTML = "AM"
     }
+    
+    if(hrs<10){
+        hrs = 0 +''+ hrs;
+    }
     if(min<10){
         min =  0 +''+ min;
     }
+
     if(sec<10){
         sec =  0 +''+ sec;
     }
